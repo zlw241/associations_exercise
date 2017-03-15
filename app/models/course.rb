@@ -32,13 +32,6 @@ class Course < ActiveRecord::Base
     :primary_key => :id
   )
 
-  has_many(
-    :postrequisites,
-    :class_name => "Course",
-    :foreign_key => :prereq_id,
-    :primary_key => :id
-  )
-
   belongs_to(
     :instructor,
     :class_name => "User",
